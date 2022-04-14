@@ -1,0 +1,26 @@
+{
+    "manifest_version" : 2,
+    "name": "sea-king",
+    "version": "1.0",
+    "description": "简历填写小帮手",
+    "icons":{
+        "128":"img/kk.png",
+        "48": "img/kk.png",
+        "16": "img/kk.png"
+    },
+    "browser_action":{
+        "default_icon":"img/kk.png"
+    },
+    "permissions":[
+        "storage",
+        "http://*/*",
+        "https://*/*",
+        "<all_urls>"
+    ],
+    "content_scripts":[
+        {
+            "matches":["<all_urls>"],
+            "js":["js/jquery-3.6.0.min.js","js/content.js"]
+        }
+    ]
+}
